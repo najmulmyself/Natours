@@ -16,7 +16,7 @@ Dark green: #28b485
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 16px;
   line-height: 1.7;
   padding: 30px;
   color: #777;
@@ -24,7 +24,7 @@ body {
 .header {
   background-image: linear-gradient(
       to right bottom,
-      rgba(126, 213, 111, 0.7),
+      rgba(126, 213, 111, 0.8),
       rgba(40, 180, 133, 0.8)
     ),
     url(../img/hero.jpg);
@@ -53,10 +53,12 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center; /* for centering btn */
 }
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  margin-bottom: 60px;
 }
 .heading-primary-title {
   display: block;
@@ -108,4 +110,37 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn:visited,
+.btn:link {
+    text-transform : uppercase;
+    text-decoration: none;
+    padding : 15px 40px;
+    display: inline-block; /* for blocking the element */
+    border-radius : 100px;
+
+    animation-name : moveInBottom;
+    animation-duration : 1s;
+}
+.btn:hover{
+    box-shadow : 0 10px 20px rgba(0,0,0,0.2);
+    transform : translateY(-3px); /* if value got  minus it will move to to up because its 2d plane and starts from (0,0) */
+}
+.btn:active{
+    box-shadow : 0 5px 10px rgba(0,0,0,0.2);
+    transform : translateY(-2px);
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
 }
