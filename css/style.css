@@ -63,10 +63,49 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  backface-visibility: hidden; /* for stopping animations shakky */
+
+  /* animation: moveInLeft 1s ease-in; shortfrom */
 }
 .heading-primary-sub {
   display: block;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 14px;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    /* -100px means it will move 100px left from its original position, if it is moved left that's why value is minus */
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+    /* -100px means it will move 100px left from its original position, if it is moved left that's why value is minus */
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
