@@ -131,8 +131,7 @@ body {
   }
 }
 
-.btn:visited,
-.btn:link {
+.btn:visited, .btn:link {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
