@@ -1,0 +1,169 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+$color-grey: #777;
+$color-black: #000;
+$color-white: #fff;
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  Default Font size is 16 px ; if we want to convert it into rem then 1rem = 16px; | to calculate easier we set the defalt font size 10px;
+  and rem always use html font size, what we declared here. 
+  */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  padding: 3rem;
+  color: $color-grey;
+}
+.header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-dark, 0.9),
+      rgba($color-primary-light, 0.8)
+    ),
+    url(../img/hero.jpg);
+  height: 95vh;
+  background-size: cover;
+  /* it wil cover the width and according to its 95% viewport. */
+  background-size: top; /* fixed from top */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); /* polygon( x y , x y , x y, x y ) clock wise | ref: https://bennettfeely.com/clippy/ */
+  position: relative; /* for logo box position */
+}
+
+.logo-box {
+  position: absolute;
+  top: 2.5rem;
+  left: 4rem;
+}
+.logo {
+  height: 3rem;
+}
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* for centering btn */
+}
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+
+  // & is used for copying the class | here &-title means "heading-primary-title"
+
+  &-title {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    backface-visibility: hidden; /* for stopping animations shakky */
+
+    /* animation: moveInLeft 1s ease-in; shortfrom */
+  }
+
+  &-sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.4rem;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+    /* -100px means it will move 100px left from its original position, if it is moved left that's why value is minus */
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+    /* -100px means it will move 100px left from its original position, if it is moved left that's why value is minus */
+  }
+  80% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn:visited,
+.btn:link {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block; /* for blocking the element */
+  border-radius: 10rem;
+
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+}
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  transform: translateY(
+    -0.3rem
+  ); /* if value got  minus it will move to to up because its 2d plane and starts from (0,0) */
+}
+.btn:active {
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  transform: translateY(-0.2rem);
+}
+.btn-white {
+  background-color: $color-white;
+  color: $color-grey;
+}
