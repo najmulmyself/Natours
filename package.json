@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-saas sass/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/najmulmyself/Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/najmulmyself/Natours/issues"
+  },
+  "homepage": "https://github.com/najmulmyself/Natours#readme",
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

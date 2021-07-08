@@ -56,13 +56,14 @@ body {
   position: relative; /* for logo box position */
 }
 
-.logo-box {
-  position: absolute;
-  top: 2.5rem;
-  left: 4rem;
-}
 .logo {
   height: 3rem;
+
+  &-box {
+    position: absolute;
+    top: 2.5rem;
+    left: 4rem;
+  }
 }
 .text-box {
   position: absolute;
