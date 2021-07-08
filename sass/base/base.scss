@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+    Default Font size is 16 px ; if we want to convert it into rem then 1rem = 16px; | to calculate easier we set the defalt font size 10px;
+    and rem always use html font size, what we declared here. 
+    */
+
+html {
+  font-size: 10px;
+}
