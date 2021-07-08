@@ -25,3 +25,28 @@
     color: $color-grey;
   }
 }
+
+.btn-text {
+  &:link,
+  &:visited{
+    font-size: $defalt-font-size;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: $color-primary-dark;
+    border-bottom: 1px solid $color-primary-dark;
+    padding: .3rem;
+  }
+
+  &:hover{
+    color: $color-white;
+    background-color: $color-primary-dark;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    transform: translateY(-2px);
+  }
+  &:active{
+    box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    transform : translateY(0);
+  }
+}

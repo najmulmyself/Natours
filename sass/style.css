@@ -104,12 +104,38 @@ body {
 }
 
 .heading-secondary:hover {
-  transform: skewY(3deg) scale(1.1);
+  transform: skewY(2deg) skewX(2deg) scale(1.1);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
 }
 
 .u-center-text {
   text-align: center;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
 }
 
 .section-about {
@@ -222,4 +248,27 @@ body {
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  color: #28b485;
+  border-bottom: 1px solid #28b485;
+  padding: .3rem;
+}
+
+.btn-text:hover {
+  color: #fff;
+  background-color: #28b485;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
 }
