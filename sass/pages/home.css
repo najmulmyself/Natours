@@ -1,1 +1,5 @@
-/* No CSS */
+.section-about {
+  background-color: orangered;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
