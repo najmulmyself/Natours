@@ -1,7 +1,8 @@
-
 @import "./abstract/variable";
 @import "./abstract/function";
 @import "./abstract/mixins";
+
+@import "./component/composition";
 
 @import "./base/animation";
 @import "./base/base";
