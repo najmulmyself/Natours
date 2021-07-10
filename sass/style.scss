@@ -1,19 +1,19 @@
-@import "./abstract/variable";
-@import "./abstract/function";
-@import "./abstract/mixins";
+@import "./abstract/variable.scss";
+@import "./abstract/function.scss";
+@import "./abstract/mixins.scss";
 
-@import "./component/composition";
-@import "./component/feature-box";
+@import "./component/composition.scss";
+@import "./component/feature-box.scss";
 
-@import "./base/animation";
-@import "./base/base";
-@import "./base/typography";
-@import "./base/utilities";
+@import "./base/animation.scss";
+@import "./base/base.scss";
+@import "./base/typography.scss";
+@import "./base/utilities.scss";
 
-@import "./pages/home";
+@import "./pages/home.scss";
 
 @import "./layout/header.scss";
 
-@import "layout/grid";
+@import "layout/grid.scss";
 
-@import "./component/button";
+@import "./component/button.scss";
