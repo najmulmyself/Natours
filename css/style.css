@@ -65,6 +65,10 @@
   background-color: #fff;
   color: #777; }
 
+.btn-green {
+  background-color: #55c57a;
+  color: #fff; }
+
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
   font-weight: bold;
@@ -91,8 +95,6 @@
   position: relative;
   height: 50rem; }
   .card-side {
-    background-color: orange;
-    color: #fff;
     font-size: 2rem;
     height: 50rem;
     transition: all 0.6s ease;
@@ -109,6 +111,10 @@
       transform: rotateY(180deg); }
       .card-side-back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card-side-back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card-side-back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card-side-front {
     transform: rotateY(-180deg); }
   .card:hover .card-side-back {
@@ -122,9 +128,9 @@
     .card-image-1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
     .card-image-2 {
-      background-image: url(../img/nat-6.jpg); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
     .card-image-3 {
-      background-image: url(../img/nat-7.jpg); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
   .card-heading {
     font-size: 2rem;
     font-weight: 700;
@@ -133,7 +139,7 @@
     position: absolute;
     top: 18rem;
     right: 2rem;
-    transform: skewY(-4deg); }
+    transform: skewY(-5deg); }
   .card-details {
     padding: 4rem 0 3rem 0; }
     .card-details ul {
@@ -147,6 +153,23 @@
         color: #777; }
         .card-details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
+  .card-action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card-price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: #fff; }
+  .card-price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card-price-value {
+    font-size: 6rem;
+    font-weight: 100; }
 
 @keyframes moveInLeft {
   0% {
