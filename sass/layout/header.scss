@@ -11,6 +11,12 @@
   background-size: cover;
   /* it wil cover the width and according to its 95% viewport. */
   background-size: top; /* fixed from top */
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 75vh,
+    0 100%
+  ); /* polygon( x y , x y , x y, x y ) clock wise | ref: https://bennettfeely.com/clippy/ */
   clip-path: polygon(
     0 0,
     100% 0,

@@ -4,6 +4,8 @@
 
 @import "./component/composition.scss";
 @import "./component/feature-box.scss";
+@import "./component/button.scss";
+@import "./component/card.scss";
 
 @import "./base/animation.scss";
 @import "./base/base.scss";
@@ -13,7 +15,4 @@
 @import "./pages/home.scss";
 
 @import "./layout/header.scss";
-
-@import "layout/grid.scss";
-
-@import "./component/button.scss";
+@import "./layout/grid.scss";
