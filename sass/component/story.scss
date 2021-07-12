@@ -1,0 +1,73 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.3);
+  background-color: $color-white;
+  border-radius: 3px;
+  padding: 4rem 4rem 4rem 5rem;
+  //   padding-left: 5rem;
+  font-size: $defalt-font-size;
+  transform: skewX(-12deg);
+  position: relative; // for figure caption.
+  // we can solve this with polygon below | but skew seems perfect | what we have to do extra is , we have to set the skew separately bcz we already declared transform for shape | and css does not work with 2 transform property same time | otherwise we can solve this problem with our previous method " & > * " by doing this.
+  //   clip-path: polygon(8% 0 , 100% 0 , 92% 100% , 0 100%);
+
+  &-shape {
+    overflow: hidden; // when we hover .stroy-image , shape border shows | to eradicate this we set the overflow hidden
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-2.5rem) translateY(1.3rem) skewX(12deg); // for padding right | gutter between figure and text
+  }
+  // we can solve this with polygon below | but skew seems perfect |
+  //what we have to do extra is , we have to set the skew separately bcz we already declared transform for shape |
+  //and css does not work with 2 transform property same time | otherwise we can solve this problem with our previous method " & > * " by doing this.
+  &-img {
+    // width: 100%; // we cant set width 100% bcz the width of this image is bigger than its height | we cant set both width and height at the same time | its looks weird
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden; // sometimes we can see weird result when we play with animation | backface-visibility can solve this error
+    transition: all 0.6s;
+  }
+
+  &-text {
+    transform: skewX(12deg);
+
+    // we can solve this with polygon below | but skew seems perfect |
+    //what we have to do extra is , we have to set the skew separately bcz we already declared transform for shape |
+    //and css
+  }
+
+  &-caption {
+    font-size: 1.7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    transform: translate(
+      -50%,
+      20%
+    ); // seted it 20 bcz it will show up form down a little.
+    opacity: 0; // initally we want it hidden
+    transition: all 0.6s;
+    backface-visibility: hidden; // for smooth animations | shakky animation fixed
+  }
+  // when we hover , it'll only apply on story-caption
+  &:hover &-caption {
+    opacity: 1; // when we hover over it will show up
+    transform: translate(
+      -50%,
+      -50%
+    ); // if we only set translateY we face a problem that it shows center position " caption "
+  }
+  &:hover &-img {
+    filter: blur(5px);
+    transform: translateX(-4rem) scale(1);
+  }
+}
