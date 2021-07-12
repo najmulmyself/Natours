@@ -74,7 +74,13 @@
   background-size: cover;
   height: 50rem;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.25);
   z-index: 2;
   // opacity: .25;
+
+  &-form{
+
+    width: 50%;
+    padding : 5rem;
+  }
 }
