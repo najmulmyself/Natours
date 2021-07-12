@@ -363,6 +363,23 @@ body {
   padding: 15rem;
   position: relative; }
 
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #28b485, #7ed56f); }
+
+.white-back {
+  background-color: white;
+  width: 100%;
+  z-index: 11; }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: cover;
+  height: 50rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  z-index: 2; }
+
 .header {
   background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.9), rgba(126, 213, 111, 0.8)), url(../img/hero.jpg);
   height: 95vh;
