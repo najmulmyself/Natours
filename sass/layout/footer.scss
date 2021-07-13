@@ -1,6 +1,7 @@
 .footer {
   background-color: $color-grey-dark-1;
   padding: 10rem 0;
+  color: $color-white;
   font-size: 1.5rem;
 
   &-logo-box {
@@ -33,7 +34,7 @@
   &-link {
     &:link,
     &:visited {
-      color: $color-grey;
+      color: inherit; // inherit from footer section
       text-decoration: none;
       display: inline-block;
       text-transform: uppercase;
