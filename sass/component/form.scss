@@ -1,0 +1,47 @@
+.form {
+  &-group {
+  }
+
+  &-input {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    width: 90%;
+    display: block;
+    background-color: rgba($color-white, 0.5);
+    border-radius: 3px;
+    border: none;
+    border-bottom: 3px solid transparent; // this is for the foucus mode. | if this gone it will automatically collapsea bit when focus bcz focus has 3px solid border bottom
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 .8rem 2rem rgba($color-black, 0.2);
+      border-bottom: 3px solid $color-primary;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey;
+    }
+  }
+
+  &-label {
+      font-size: 1.2rem;
+      font-weight: 700;
+    //   margin-left: 1.2rem;
+      margin: 1rem 0 1rem 1.2rem;
+      display: block;
+      transition: all 0.2s;
+  }
+
+  &-input:placeholder-shown + &-label{
+
+    // this is the immediate child selector | when &-input:placeholder-shown then its immediate sibling will work on this following instruction.
+
+      opacity : 0;
+      visibility : hidden;
+      transform: translateY(-4rem);
+  }
+}
