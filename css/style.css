@@ -42,7 +42,7 @@
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
-.btn:visited, .btn:link {
+.btn, .btn:visited, .btn:link {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -50,7 +50,8 @@
   /* for blocking the element */
   border-radius: 10rem;
   animation-name: moveInBottom;
-  animation-duration: 1s; }
+  animation-duration: 1s;
+  border: none; }
 
 .btn:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -365,7 +366,7 @@ body {
   margin-bottom: 2rem; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem; }

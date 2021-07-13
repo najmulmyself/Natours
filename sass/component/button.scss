@@ -1,6 +1,7 @@
 // @import "../abstract/variable";
 
 .btn {
+  &,
   &:visited,
   &:link {
     text-transform: uppercase;
@@ -11,6 +12,11 @@
 
     animation-name: moveInBottom;
     animation-duration: 1s;
+
+    // THIS IS FOR <button> element
+
+    // outline: none;
+    border: none;
   }
   &:hover {
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
