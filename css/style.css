@@ -310,7 +310,10 @@
     and rem always use html font size, what we declared here. 
     */
 html {
-  font-size: 10px; }
+  font-size: 62.5%; }
+  @media (max-width: 600px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Lato", sans-serif;
