@@ -5,3 +5,31 @@
         clear: both;
     }
 }
+
+
+//  MEDIA QUERY MANEGER
+
+/*
+
+0-600px : Phone
+600-900px : Tablet portrait
+900-1200px : Tablet landscape
+[1200-1800px] is where our normal styles apply
+1800 + : Big Desktop
+
+*/
+
+// a simple mixin looks like this: 
+
+// @mixin respond-phone {
+//     @media(max-width: 600px){@content};
+//     //respond-phone have to be included when use 
+//     // @content is the place where we have to write our content
+// }
+
+@mixin respond  ($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width:600px) {@content};
+    }
+}
+// this will work faster
