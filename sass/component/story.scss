@@ -2,7 +2,7 @@
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, 0.3);
-  background-color: rgba($color-white , 0.6);
+  background-color: rgba($color-white, 0.6);
   border-radius: 3px;
   padding: 4rem 4rem 4rem 5rem;
   //   padding-left: 5rem;
@@ -11,6 +11,14 @@
   position: relative; // for figure caption.
   // we can solve this with polygon below | but skew seems perfect | what we have to do extra is , we have to set the skew separately bcz we already declared transform for shape | and css does not work with 2 transform property same time | otherwise we can solve this problem with our previous method " & > * " by doing this.
   //   clip-path: polygon(8% 0 , 100% 0 , 92% 100% , 0 100%);
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem 8rem;
+  }
+  @include respond(phone) {
+    transform: skewX(0);
+  }
 
   &-shape {
     overflow: hidden; // when we hover .stroy-image , shape border shows | to eradicate this we set the overflow hidden
@@ -22,6 +30,13 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2.5rem) translateY(1.3rem) skewX(12deg); // for padding right | gutter between figure and text
+
+    @include respond(tab-port) {
+      transform: translateX(-3rem) translateY(.1rem) skewX(12deg);
+    }
+    @include respond(phone) {
+      transform: translateX(-3rem) translateY(.5rem) skewX(0);
+    }
   }
   // we can solve this with polygon below | but skew seems perfect |
   //what we have to do extra is , we have to set the skew separately bcz we already declared transform for shape |
@@ -36,6 +51,10 @@
 
   &-text {
     transform: skewX(12deg);
+
+    @include respond(tab-port) {
+      transform: skew(0)
+    }
 
     // we can solve this with polygon below | but skew seems perfect |
     //what we have to do extra is , we have to set the skew separately bcz we already declared transform for shape |

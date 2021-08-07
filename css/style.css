@@ -211,6 +211,13 @@
   font-size: 1.6rem;
   transform: skewX(-12deg);
   position: relative; }
+  @media (max-width: 900px) {
+    .story {
+      width: 100%;
+      padding: 4rem 8rem; } }
+  @media (max-width: 600px) {
+    .story {
+      transform: skewX(0); } }
   .story-shape {
     overflow: hidden;
     width: 15rem;
@@ -221,6 +228,12 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2.5rem) translateY(1.3rem) skewX(12deg); }
+    @media (max-width: 900px) {
+      .story-shape {
+        transform: translateX(-3rem) translateY(0.1rem) skewX(12deg); } }
+    @media (max-width: 600px) {
+      .story-shape {
+        transform: translateX(-3rem) translateY(0.5rem) skewX(0); } }
   .story-img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
@@ -228,6 +241,9 @@
     transition: all 0.6s; }
   .story-text {
     transform: skewX(12deg); }
+    @media (max-width: 900px) {
+      .story-text {
+        transform: skew(0); } }
   .story-caption {
     font-size: 1.7rem;
     position: absolute;
