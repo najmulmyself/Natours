@@ -11,17 +11,17 @@
 
 html {
   font-size: 62.5%;
-  @include respond (tab-land) {
-    font-size: 70%;
-  }
-  
-  @include respond (tab-port) {
+
+  @include respond(tab-land) {
     font-size: 60%;
   }
-  @include respond (phone) {
+  @include respond(tab-port) {
+    font-size: 55%;
+  }
+  @include respond(phone) {
     font-size: 50%;
   }
-  
+
   // @include respond (big-desktop) {
   //   font-size: 80%;
   // }
