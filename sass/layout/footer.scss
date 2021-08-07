@@ -4,6 +4,16 @@
   color: $color-white;
   font-size: 1.5rem;
 
+  @include respond(tab-land) {
+    padding: 8rem 4rem;
+  }
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+  @include respond(phone) {
+    padding: 8rem 0;
+  }
+
   &-logo-box {
     text-align: center;
   }
@@ -17,6 +27,15 @@
     border-top: 1px solid $color-grey;
     padding-top: 3rem;
     display: inline-block; // this is used for the border | border width has to be the navigation items width.
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &-list {
@@ -56,5 +75,15 @@
     width: 80%;
     display: inline-block; // this is used for the border | border width has to be the navigation items width.
     float: right;
+
+    @include respond(tab-port) {
+      width: 100%;
+      float: none;
+    }
+    @include respond(phone) {
+      width: 100%;
+      float: none;
+    }
+
   }
 }

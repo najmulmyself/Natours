@@ -2,48 +2,68 @@
 // @import "../abstract/mixins";
 
 .row {
-    max-width: $grid-width;
-    margin: 0 auto;
+  max-width: $grid-width;
+  margin: 0 auto;
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+  @include respond(tab-port) {
+    max-width: 50%;
+  }
+
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+    //this means you select those class which starts with "col-" | ^ refers to starts , $ means end with and so more.
     &:not(:last-child) {
-        margin-bottom: $gutter-vertical;
-    }
-    
-    @include clearfix;
+      // this means you will select all except last child | select all, not last child
+      margin-right: $gutter-horizontal;
 
-    [class^="col-"] {
-        float: left;
-        //this means you select those class which starts with "col-" | ^ refers to starts , $ means end with and so more.
-        &:not(:last-child) {
-            // this means you will select all except last child | select all, not last child 
-            margin-right: $gutter-horizontal;
-        }
-    }
- 
-    .col-1-of-2 {
-        width: calc((100% - #{$gutter-horizontal}) / 2);
-        
-        // calc is a css function , if we want to use sass in css we need to add extra syntax | #{variable name} this is the process.
-        
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
     }
 
-    .col-1-of-3 {
-        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    @include respond(tab-port) {
+      width: 100% !important;
     }
+  }
 
-    .col-2-of-3 {
-        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
-    }
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
 
-    .col-1-of-4 {
-        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-    }
+    // calc is a css function , if we want to use sass in css we need to add extra syntax | #{variable name} this is the process.
+  }
 
-    .col-2-of-4 {
-        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
-    }
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+  }
 
-    .col-3-of-4 {
-        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
-    }
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    );
+  }
 
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    );
+  }
+
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
+    );
+  }
 }

@@ -316,17 +316,23 @@ html {
       font-size: 60%; } }
   @media (max-width: 900px) {
     html {
-      font-size: 55%; } }
+      font-size: 50%; } }
   @media (max-width: 600px) {
     html {
-      font-size: 50%; } }
+      font-size: 40%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media (max-width: 900px) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  padding: 3rem;
   color: #777; }
 
 .heading-primary {
@@ -344,6 +350,9 @@ body {
     backface-visibility: hidden;
     /* for stopping animations shakky */
     /* animation: moveInLeft 1s ease-in; shortfrom */ }
+    @media (max-width: 600px) {
+      .heading-primary-title {
+        letter-spacing: 1rem; } }
   .heading-primary-sub {
     display: block;
     font-size: 2rem;
@@ -352,6 +361,9 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 600px) {
+      .heading-primary-sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -361,8 +373,14 @@ body {
   background-image: linear-gradient(to right, #28b485, #7ed56f);
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
+  letter-spacing: 0.2rem;
+  transition: all 0.2s; }
+  @media (max-width: 900px) {
+    .heading-secondary {
+      letter-spacing: 0.1rem; } }
+  @media (max-width: 600px) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(2deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -445,6 +463,10 @@ body {
   /* polygon( x y , x y , x y, x y ) clock wise | ref: https://bennettfeely.com/clippy/ */
   position: relative;
   /* for logo box position */ }
+  @media (max-width: 600px) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
 
 .logo {
   height: 3rem; }
@@ -466,6 +488,15 @@ body {
   padding: 10rem 0;
   color: #fff;
   font-size: 1.5rem; }
+  @media (max-width: 1200px) {
+    .footer {
+      padding: 8rem 4rem; } }
+  @media (max-width: 900px) {
+    .footer {
+      padding: 8rem 0; } }
+  @media (max-width: 600px) {
+    .footer {
+      padding: 8rem 0; } }
   .footer-logo-box {
     text-align: center; }
   .footer-logo {
@@ -475,6 +506,15 @@ body {
     border-top: 1px solid #777;
     padding-top: 3rem;
     display: inline-block; }
+    @media (max-width: 900px) {
+      .footer-navigation {
+        width: 100%;
+        text-align: center; } }
+    @media (max-width: 600px) {
+      .footer-navigation {
+        width: 100%;
+        text-align: center;
+        float: none; } }
   .footer-list {
     list-style: none; }
   .footer-item {
@@ -498,12 +538,26 @@ body {
     width: 80%;
     display: inline-block;
     float: right; }
+    @media (max-width: 900px) {
+      .footer-copyright {
+        width: 100%;
+        float: none; } }
+    @media (max-width: 600px) {
+      .footer-copyright {
+        width: 100%;
+        float: none; } }
 
 .row {
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 900px) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 900px) {
+    .row {
+      max-width: 50%; } }
   .row::after {
     content: "";
     display: table;
@@ -512,15 +566,22 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 900px) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 900px) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
     width: calc((100% - 2 * 6rem) / 3); }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
   .row .col-1-of-4 {
     width: calc((100% - 3 * 6rem) / 4); }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }

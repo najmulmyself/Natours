@@ -26,6 +26,10 @@
 //     // @content is the place where we have to write our content
 // }
 
+
+// IMPORTANT: IF WE WANT TO CHANGE UNIT TO REM WE CANT BCZ MEDIA QUERY DO NOT SUPPORT REM( 10PX == 1 REM)
+// IT WILL CONSIDER REM == 16PX | SO BEST PRACTICE IS TO USE EM UNIT | EM == DEFAULT 16PX
+
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 600px) {

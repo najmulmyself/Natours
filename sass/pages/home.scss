@@ -13,7 +13,7 @@
       rgba($color-primary-light, 0.8)
     ),
     url(../img/nat-4.jpg);
-    background-size: cover;
+  background-size: cover;
   //THIS IS THE OLDER METHOD WE USED IN HEAD SECTION
 
   //   clip-path: polygon(
@@ -22,7 +22,7 @@
   //   100% 85vh,
   //   0 100%
   // );
-  // margin-top: -10rem; 
+  // margin-top: -10rem;
 
   // BOTH OF THE METHOD ARE FINE
 
@@ -31,46 +31,56 @@
   // if we transform the whole section ( feature section) -7 deg it will turn like this.
   // but the prob arise everything in the sec turned -7 deg. thats look like odd.
 
-  transform : skewY(-7deg);
+  transform: skewY(-7deg);
   margin-top: -10rem;
   // to solve this problem . we select the class by & and ">" refers the children of the element which is .row
   // the meaning of this thing is & > * (  direct child of this section feature as ".row" you again turned into 7deg(plus 7)
-  // then our problem got solved 
+  // then our problem got solved
   & > * {
-    transform : skewY(7deg);
+    transform: skewY(7deg);
   }
 }
 
-.section-tours{
+.section-tours {
   background-color: $color-grey-light-1;
   padding: 25rem 0 2rem 0;
   margin-top: -10rem; // for moving up the whole section into previous section.
 }
 
-.section-stories{
+.section-stories {
   padding: 15rem;
   position: relative; // for video position.
 }
 
-.section-book{
+.section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, $color-primary-dark , $color-primary-light);
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-dark,
+    $color-primary-light
+  );
 }
-.white-back{
+.white-back {
   background-color: white;
   width: 100%;
   // transform : skewY(-10deg);
   z-index: 11;
 }
-.book{
-  // this method is called solid color gradient |  ref : ACSS 16 | no 67 and 68 same result  
+.book {
+  // this method is called solid color gradient |  ref : ACSS 16 | no 67 and 68 same result
 
   // background-image: linear-gradient(105deg,rgba($color-white, 0.9) 50% , orangered 50%),url(../img/nat-10.jpg);
-  
-  background-image: linear-gradient(105deg,rgba($color-white, 0.9) 0%, rgba($color-white,0.9) 50% , transparent 50%),url(../img/nat-10.jpg);
-  
+
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+
   // we said 0% will be white , 50% will be white and rest of the 50% will be orange or other.
-  
+
   background-size: cover;
   height: 50rem;
   border-radius: 3px;
@@ -78,9 +88,8 @@
   z-index: 2;
   // opacity: .25;
 
-  &-form{
-
+  &-form {
     width: 50%;
-    padding : 5rem;
+    padding: 5rem;
   }
 }

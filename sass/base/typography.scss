@@ -5,7 +5,6 @@ body {
   font-weight: 400;
   font-size: $defalt-font-size;
   line-height: 1.7;
-  padding: 3rem;
   color: $color-grey;
 }
 
@@ -28,6 +27,10 @@ body {
     backface-visibility: hidden; /* for stopping animations shakky */
 
     /* animation: moveInLeft 1s ease-in; shortfrom */
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+    }
   }
 
   &-sub {
@@ -39,23 +42,39 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
-.heading-secondary{
+.heading-secondary {
   font-size: 3.5rem;
-  display : inline-block;
+  display: inline-block;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right , $color-primary-dark , $color-primary-light);
+  background-image: linear-gradient(
+    to right,
+    $color-primary-dark,
+    $color-primary-light
+  );
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  @include respond(tab-port) {
+    letter-spacing: 0.1rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(2deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba($color-black , .2);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   }
 }
 
@@ -64,10 +83,11 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
-.paragraph{
+.paragraph {
   font-size: $defalt-font-size;
 
-  &:not(:last-child){ // everything except last child
+  &:not(:last-child) {
+    // everything except last child
     margin-bottom: 3rem;
   }
 }
