@@ -108,8 +108,32 @@
   z-index: 2;
   // opacity: .25;
 
+  @include respond(tab-land){
+    background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 60%,
+      transparent 60%
+    ),
+    url(../img/nat-10.jpg);
+  }
+  @include respond(phone){
+    background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 100%),
+    url(../img/nat-10.jpg);
+  }
+
   &-form {
     width: 50%;
     padding: 5rem;
+
+    @include respond(tab-land) {
+      width: 60%;  
+    }
+    @include respond(phone) {
+      width: 100%;  
+    }
   }
 }
