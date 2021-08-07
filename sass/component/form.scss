@@ -12,6 +12,10 @@
     border: none;
     border-bottom: 3px solid transparent; // this is for the foucus mode. | if this gone it will automatically collapsea bit when focus bcz focus has 3px solid border bottom
 
+    @include respond(phone) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0 .8rem 2rem rgba($color-black, 0.2);

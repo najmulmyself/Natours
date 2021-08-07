@@ -285,6 +285,9 @@
   border-radius: 3px;
   border: none;
   border-bottom: 3px solid transparent; }
+  @media (max-width: 600px) {
+    .form-input {
+      width: 100%; } }
   .form-input:focus {
     outline: none;
     box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
